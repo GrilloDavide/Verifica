@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Museo louvre = new Museo(2);
+        Museo louvre = new Museo(5);
         List<Turista> turisti = new ArrayList<>();
 
-        turisti.add(new Turista("Bianchi", louvre));
-        turisti.add(new Turista("Martelli", louvre));
-        turisti.add(new Turista("Novi", louvre));
+        for(int i = 0; i < 50; i++){
+            turisti.add(new Turista("Turista" + (i+1), louvre));
+        }
 
         for (Turista t : turisti) {
             t.start();

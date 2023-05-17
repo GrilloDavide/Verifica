@@ -16,7 +16,7 @@ public class Museo {
         
         while(visiteInCorso == visiteMax){
             try {
-                System.out.println(t.getName() + " aspetta");
+                //System.out.println(t.getName() + " aspetta"); Utilizzato in debug
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();

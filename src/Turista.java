@@ -10,10 +10,12 @@ public class Turista extends Thread{
     
     @Override
     public void run() {
-        museo.entraNelMuseo();
         try {
-            int i = (int)(Math.random() * 10000 + 1);
-            sleep(i);
+            sleep((int)(Math.random() * 2000 + 1));
+        
+            museo.entraNelMuseo();
+        
+            sleep((int)(Math.random() * 10000 + 1));
         } catch (InterruptedException e) {
             e.printStackTrace();
         } 
